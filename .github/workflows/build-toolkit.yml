@@ -1,0 +1,72 @@
+name: Build Ultra-Compressed Toolkit
+
+on:
+  workflow_dispatch:
+    inputs:
+      gdrive_id:
+        description: 'ID File Google Drive (1.8GB Zip)'
+        required: true
+        default: '1_ib3P0BYnUNOpIF1xrkKayx0KoukhKQ8'
+      version_tag:
+        description: 'Tag Rilis (Contoh: v13.0-Ultra)'
+        required: true
+        default: 'v13.0-Ultra'
+
+permissions:
+  contents: write
+
+jobs:
+  compress-toolkit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Environment (7-Zip & gdown)
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y p7zip-full
+          # Install gdown untuk mendownload file besar dari GDrive (bypass virus scan warning)
+          pip install gdown
+
+      - name: Download Original Backup from Google Drive
+        run: |
+          echo "Mendownload file dari Google Drive..."
+          gdown id ${{ github.event.inputs.gdrive_id }} -O backup-original.zip
+          echo "Ukuran file asli:"
+          ls -lh backup-original.zip
+
+      - name: Extract Original ZIP
+        run: |
+          echo "Mengekstrak file ZIP asli..."
+          mkdir -p staging
+          unzip -q backup-original.zip -d staging/
+          # Hapus file ZIP asli untuk menghemat storage server
+          rm backup-original.zip
+
+      - name: Compress with 7-Zip Ultra (LZMA2 Solid)
+        run: |
+          echo "Memulai kompresi tingkat tinggi (Ini akan memakan waktu beberapa menit)..."
+          cd staging
+          # Penjelasan Argumen:
+          # -t7z      : Format 7z
+          # -m0=lzma2 : Algoritma kompresi LZMA2 (Terbaik saat ini)
+          # -mx=9     : Tingkat kompresi Ultra (Level 9)
+          # -ms=on    : Solid archive (Menggabungkan ribuan file kecil cache gradle menjadi satu blok agar super kecil)
+          # -mmt=on   : Gunakan Multi-threading server GitHub
+          
+          7z a -t7z -m0=lzma2 -mx=9 -md=64m -ms=on -mmt=on ../toolkit-offline-ultra.7z .
+          
+          cd ..
+          echo "=== HASIL KOMPRESI ULTRA ==="
+          ls -lh toolkit-offline-ultra.7z
+
+      - name: Upload to GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.event.inputs.version_tag }}
+          name: "Offline Toolkit ${{ github.event.inputs.version_tag }}"
+          body: |
+            **Ultra-Compressed Offline Toolkit**
+            - Termasuk NDK r29 (format 7z asli, tidak diekstrak)
+            - Termasuk Android SDK API 33/34
+            - Termasuk Full Gradle Cache
+            - Termasuk apt pkg-cache
+          files: toolkit-offline-ultra.7z

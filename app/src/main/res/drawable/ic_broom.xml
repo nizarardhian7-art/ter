@@ -1,0 +1,10 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- Sapu / broom icon — beda dari tong sampah -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M19.36,2.72L20.78,4.14L15.06,9.85C16.13,11.39 16.28,13.24 15.38,14.44L9.06,10.74C10.06,9.33 11.98,8.97 13.64,9.56L19.36,2.72ZM6.09,11.95L12.41,15.65C11.41,17.06 9.49,17.42 7.83,16.83L2.11,23.55L0.69,22.13L6.41,16.42C5.34,14.88 5.19,13.03 6.09,11.95ZM4.5,13.5L10.82,17.2L9.06,19.35L2.74,15.65L4.5,13.5Z" />
+</vector>

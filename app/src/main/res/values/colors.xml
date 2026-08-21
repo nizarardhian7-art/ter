@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#0061A4</color>
+    <color name="onPrimary">#FFFFFF</color>
+    <color name="primaryContainer">#D1E4FF</color>
+    <color name="onPrimaryContainer">#001D36</color>
+
+    <color name="secondary">#535F70</color>
+    <color name="onSecondary">#FFFFFF</color>
+    <color name="secondaryContainer">#D7E3F7</color>
+    <color name="onSecondaryContainer">#101C2B</color>
+
+    <color name="tertiary">#6B5778</color>
+    <color name="onTertiary">#FFFFFF</color>
+    <color name="tertiaryContainer">#F2DAFF</color>
+    <color name="onTertiaryContainer">#251431</color>
+
+    <color name="error">#BA1A1A</color>
+    <color name="onError">#FFFFFF</color>
+    <color name="errorContainer">#FFDAD6</color>
+    <color name="onErrorContainer">#410002</color>
+
+    <color name="background">#FDFCFF</color>
+    <color name="onBackground">#1A1C1E</color>
+    <color name="surface">#FDFCFF</color>
+    <color name="onSurface">#1A1C1E</color>
+
+    <color name="log_note">#4DD0E1</color>
+    <color name="log_continuation">#EF9A9A</color>
+    <color name="log_separator">#333333</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="log_info">#2196F3</color>
+    <color name="log_warning">#FFC107</color>
+    <color name="log_error">#F44336</color>
+    <color name="log_success">#4CAF50</color>
+    <color name="log_default">#E0E0E0</color>
+    <color name="log_orange">#FF9800</color>
+    <color name="terminal_bg">#121212</color>
+    <color name="terminal_surface">#1E1E1E</color>
+    <color name="hacker_green">#A6E22E</color>
+    <color name="terminal_black">#000000</color>
+</resources>

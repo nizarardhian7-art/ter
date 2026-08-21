@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Aktif (toggle ON) -->
+    <item android:color="@color/hacker_green" android:state_selected="true" />
+    <!-- Tidak aktif -->
+    <item android:color="#2A2A2A" />
+</selector>

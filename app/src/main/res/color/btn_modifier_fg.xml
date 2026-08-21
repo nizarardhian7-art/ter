@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Aktif (toggle ON) -->
+    <item android:color="@color/terminal_black" android:state_selected="true" />
+    <!-- Tidak aktif -->
+    <item android:color="@color/log_default" />
+</selector>

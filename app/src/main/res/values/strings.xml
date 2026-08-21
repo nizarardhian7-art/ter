@@ -1,0 +1,97 @@
+<resources>
+    <string name="app_name">TermuX</string>
+
+    <string name="nav_home">Explorer</string>
+    <string name="nav_terminal">Terminal</string>
+    <string name="nav_settings">Settings</string>
+
+    <string name="bootstrap_installing">Initializing environment…</string>
+
+    <string name="current_path">Path: %1$s</string>
+    <string name="permission_required">Permission Required</string>
+    <string name="permission_desc">TermuX needs storage access to manage your files and projects.</string>
+    <string name="grant_permission">Grant Permission</string>
+    <string name="access_denied">Access Denied to this directory</string>
+    <string name="opening_file_not_supported">File preview is not supported</string>
+    <string name="install_failed">Install failed: %1$s</string>
+    <string name="permission_denied">Permission denied</string>
+    <string name="empty_folder_title">Directory is empty</string>
+    <string name="empty_folder_subtitle">Files added here will appear automatically.\nLong press items for context menu.</string>
+    
+    <string name="pinned_section">Pinned</string>
+    <string name="recent_section">Recent</string>
+    <string name="pin_folder">Pin directory</string>
+    <string name="unpin_folder">Unpin directory</string>
+
+    <string name="terminal_title">Terminal</string>
+    <string name="clear_log">Clear</string>
+    <string name="copy_log">Copy Log</string>
+    <string name="log_copied">Copied to clipboard</string>
+    <string name="no_text_selected">No text selected</string>
+
+    <string name="copy">Copy</string>
+    <string name="clear">Clear</string>
+    <string name="enter">Enter</string>
+    <string name="ctrl">CTRL</string>
+    <string name="alt">ALT</string>
+    <string name="esc">ESC</string>
+    <string name="stop">Stop</string>
+
+    <string name="open_terminal_here">Open terminal here</string>
+    <string name="extract_here">Extract archive</string>
+    <string name="copy_path">Copy path</string>
+    <string name="rename">Rename</string>
+    <string name="delete">Delete</string>
+    <string name="new_folder">New Directory</string>
+
+    <string name="ndk_status">NDK Status</string>
+    <string name="install_ndk">Import NDK Package</string>
+    <string name="reset_ndk">Uninstall NDK</string>
+    <string name="ndk_not_installed">Status: Not Installed</string>
+    <string name="ndk_installed">Status: NDK Installed ✓</string>
+    <string name="ndk_installed_version">Status: NDK %1$s ✓</string>
+    <string name="extracting_ndk">Configuring Native Development Kit…</string>
+    <string name="initializing_extraction">Initializing extraction…</string>
+    <string name="installation_in_background">Process running in background…</string>
+    <string name="extraction_failed">Extraction failed. Please check the integrity of the archive.</string>
+    <string name="ndk_removed">NDK uninstalled successfully</string>
+    <string name="remove_ndk_confirm_title">Uninstall NDK?</string>
+    <string name="remove_ndk_confirm_msg">Native Development Kit will be removed. You will need to import it again to build C/C++ projects.</string>
+    <string name="yes">Execute</string>
+    <string name="no">Cancel</string>
+
+    <string name="subtitle_folder">Directory • %1$s</string>
+    <string name="subtitle_file">%1$s KB • %2$s</string>
+
+    <string name="about_section">System Info</string>
+    <string name="about_author_label">Developer</string>
+    <string name="author_name">Mon Dev</string>
+    <string name="about_open_telegram">Community</string>
+    <string name="about_check_update">Check for Updates</string>
+    <string name="about_version">Version %1$s</string>
+    <string name="telegram_url">https://t.me/modfreew</string>
+
+    <string name="license_url">https://raw.githubusercontent.com/Nizararap/Licence/refs/heads/main/license.json</string>
+    <string name="update_available_title">System Update Available</string>
+    <string name="update_message_default">A new environment update is available. Please visit the community channel to obtain the latest build.</string>
+    <string name="update_open_telegram">Open Channel</string>
+    <string name="update_later">Dismiss</string>
+    <string name="update_checking">Checking repository…</string>
+    <string name="update_up_to_date">System is up to date ✓</string>
+
+    <string name="notif_channel_install">Environment Setup</string>
+    <string name="installing_ndk">Configuring NDK…</string>
+
+    <!-- NEW: Professional IDE Strings -->
+    <string name="build_options_title">Build Configuration</string>
+    <string name="build_clean_cache">Clean Build (Wipe cache &amp; object files)</string>
+    <string name="btn_execute">Execute</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="msg_deleted">Item(s) deleted</string>
+    <string name="msg_delete_failed">Failed to delete item(s)</string>
+    <string name="msg_folder_created">Directory created</string>
+    <string name="msg_folder_failed">Failed to create directory</string>
+    <string name="msg_renamed">Renamed successfully</string>
+    <string name="msg_rename_failed">Failed to rename</string>
+    <string name="msg_build_started">Build task queued: %1$s</string>
+</resources>
